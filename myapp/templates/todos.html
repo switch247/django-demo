@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+
+{%block content%}
+<ul>
+    {% for todo in todos %}
+    <li>
+        {{todo.title}}: {% if todo.completed %} Completed{% else %} Not Completed {% endif %}
+        <!-- <input type="checkbox" name="completed" id="" value='true'> -->
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
